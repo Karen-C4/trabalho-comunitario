@@ -3,7 +3,7 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $database = "projeto_comunitario";
-$porta = 3316;
+
 
 // cria a conexão com o banco de dados
 $conn = new mysqli($servername, $username, $password, $database, $porta);
@@ -23,7 +23,7 @@ $sql = "INSERT INTO doacoes (nome, tipo, descricao, contato) VALUES (?, ?, ?, ?)
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("ssss", $nome, $tipo, $descricao, $contato);
 
-// Executa e verificar
+// executa e verifica
 if ($stmt->execute()) {
     echo "<h2>Doação registrada com sucesso!</h2>";
     echo "<a href='../index.html'>Voltar para o início</a>";
