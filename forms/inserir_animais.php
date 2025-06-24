@@ -3,7 +3,7 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $database = "projeto_comunitario";
-$porta = 3316;
+
 
 // cria a conexão com o banco de dados
 $conn = new mysqli($servername, $username, $password, $database, $porta);
@@ -27,7 +27,7 @@ $sql = "INSERT INTO animais_adocao (nome, especie, idade, porte, descricao, resp
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("ssssss", $nome, $especie, $idade, $porte, $descricao, $responsavel);
 
-// Executa e verifica
+// executa e verifica
 if ($stmt->execute()) {
     echo "<h2>Cadastro realizado com sucesso!</h2>";
     echo "<a href='../index.html'>Voltar para o início</a>";
