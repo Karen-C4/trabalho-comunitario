@@ -3,7 +3,6 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $database = "projeto_comunitario";
-$porta = 3316;
 
 // cria a conexão com o banco de dados
 $conn = new mysqli($servername, $username, $password, $database, $porta);
